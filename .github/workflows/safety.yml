@@ -19,4 +19,6 @@ jobs:
 
       - name: Execute Software Composition Analysis
         continue-on-error: true
+        env:
+          SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
         run: safety scan
