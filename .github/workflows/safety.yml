@@ -5,7 +5,6 @@ on: [push, pull_request]
 jobs:
   oast-scan:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -18,11 +17,6 @@ jobs:
       - name: Install Safety
         run: pip install safety
 
-      - name: Run Safety Check (Allow Failure)
-        # The lab notes: "allow the job to fail even when the tool found several issues"
-        continue-on-error: true 
-        #run: safety check -r requirements.txt
-        # Legacy Syntax (Deprecated)
-# - run: safety check -r requirements.txt
-- name: Execute Software Composition Analysis
-  run: safety scan
+      - name: Execute Software Composition Analysis
+        continue-on-error: true
+        run: safety scan
