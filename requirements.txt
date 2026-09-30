@@ -1,8 +1,8 @@
-//insecure-package==0.1.0
+#insecure-package==0.1.0
 insecure-package>=0.2.0
 
-//requests==2.18.4
+#requests==2.18.4
 requests>=2.32.4
 
-//django==1.11.1
+#django==1.11.1
 django>=4.2.18  # Modern LTS version
