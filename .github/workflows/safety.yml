@@ -24,6 +24,5 @@ jobs:
         #run: safety check -r requirements.txt
         # Legacy Syntax (Deprecated)
 # - run: safety check -r requirements.txt
-
 - name: Execute Software Composition Analysis
   run: safety scan
