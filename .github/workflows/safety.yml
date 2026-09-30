@@ -21,4 +21,10 @@ jobs:
       - name: Run Safety Check (Allow Failure)
         # The lab notes: "allow the job to fail even when the tool found several issues"
         continue-on-error: true 
-        run: safety check -r requirements.txt
+        #run: safety check -r requirements.txt
+        # Legacy Syntax (Deprecated)
+# - run: safety check -r requirements.txt
+
+# Modern Standard (Recommended)
+- name: Execute Software Composition Analysis
+  run: safety scan
